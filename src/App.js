@@ -1,18 +1,24 @@
-import { useState } from 'react';
-import './App.css';
-import Footer from './components/Footer';
-import MainPage from './components/MainPage';
-import MovieList from './components/MovieList';
-import Nav from './components/Nav';
+import { useState } from "react";
+import "./App.css";
+import Footer from "./components/Footer";
+import MainPage from "./components/MainPage";
+import MovieList from "./components/MovieList";
+import Nav from "./components/Nav";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Search from "./Pages/Search";
 
 function App() {
- 
   return (
     <div className="App">
-      <Nav/>
-      <MovieList/>
-      <MainPage/>
-      <Footer/>
+      <Router>
+        <Nav />
+        <MovieList/>
+          <Routes>
+            <Route exact path='/' element={<MainPage/>}/>
+            <Route exact path="/search" element={<Search/>}/>
+          </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }

@@ -37,11 +37,7 @@ nav{
   height: 100px;
   width:100px;
 }
-.nav__logo{
-  position: absolute;
-}
-a{
-  text-decoration: none;
+.nav__a{
   -webkit-text-fill-color: transparent;
   background: linear-gradient(89.97deg,lightgray 1.84%,white 102.67%);
   -webkit-background-clip: text;
@@ -177,4 +173,35 @@ input:focus{
 }
 .footer__logo{
   height:100px;
+  filter:invert(90%);
+  margin-top:40px;
+}
+.footer__wrapper{
+  background-color:#282828;
+  width:100%;
+}
+.footer__links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__link{
+  list-style: none;
+  margin:25px 25px 40px 25px;
+  color:whitesmoke;
+  font-size: 20px;
+}
+.footer__link:hover{
+  cursor:pointer;
+}
+.footer__para{
+  margin-bottom:30px;
+  color:whitesmoke;
+}
+.footer__a{
+  color:whitesmoke;
+  text-decoration: none;
+}
+.footer__a:hover{
+  text-decoration: underline;
 }

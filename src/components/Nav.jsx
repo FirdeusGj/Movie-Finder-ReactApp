@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import movieLogo from "../imgs/movieLogo.png";
 
 export default function Nav() {
@@ -10,8 +11,8 @@ export default function Nav() {
           </div>
           <div className="nav__links--wrapper">
             <ul className="nav__links">
-              <li className="nav__link"><a href="/">Home</a></li>
-              <li className="nav__link"><a href="/">Find Movies</a></li>
+              <li className="nav__link"><Link className="nav__a" to="/">Home</Link></li>
+              <li className="nav__link"><Link className="nav__a" to="/search">Find Movies</Link></li>
             </ul>
           </div>
         </div>
