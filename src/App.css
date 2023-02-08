@@ -1,118 +1,114 @@
-*{
+* {
   box-sizing: border-box;
   font-family: sans-serif;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
-.border{
-  border:1px solid black;
+.border {
+  border: 1px solid black;
 }
-
 
 /* NAVIGATION */
 
-
-.nav__links{
+.nav__links {
   list-style-type: none;
   display: flex;
 }
-nav{
-  height:100px;
-  background-color: #0C0032;
+nav {
+  height: 100px;
+  background-color: #0c0032;
 }
-.nav__link{
-  font-size:24px;
+.nav__link {
+  font-size: 24px;
   margin: 10px;
   border: 2px solid white;
-  padding:10px;
+  padding: 10px;
   box-shadow: 0 0 2px white;
-  transition: all .2s ease-in-out;
-  cursor:pointer
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
-.nav__link:hover{
+.nav__link:hover {
   box-shadow: 0 0 10px white;
 }
-.nav__logo--wrapper{
-  position:relative;
+.nav__logo--wrapper {
+  position: relative;
   height: 100px;
-  width:100px;
+  width: 100px;
 }
-.nav__a{
+.nav__a {
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(89.97deg,lightgray 1.84%,white 102.67%);
+  background: linear-gradient(89.97deg, lightgray 1.84%, white 102.67%);
   -webkit-background-clip: text;
   font-weight: 700;
 }
-.nav__logo{
-  width:100px;
+.nav__logo {
+  width: 100px;
   filter: invert(90%);
 }
-.nav__section{
+.nav__section {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-
 /* MAIN PAGE */
 
-
-.main__section{
-  background-image: radial-gradient(rgba(0, 0, 0, 0.7) 5%, rgb(0, 0, 0) 95%),url('https://assets.nflxext.com/ffe/siteui/vlv3/862cc171-8df5-418c-886f-2aaf767ae159/08bde744-9b60-4fac-8e45-7c37754e94c8/AL-en-20230130-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+.main__section {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.7) 5%, rgb(0, 0, 0) 95%),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/862cc171-8df5-418c-886f-2aaf767ae159/08bde744-9b60-4fac-8e45-7c37754e94c8/AL-en-20230130-popsignuptwoweeks-perspective_alpha_website_small.jpg");
   background-size: cover;
   background-position: center;
-  color:#FEFBF6;
-  height:700px;
+  color: #fefbf6;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main__icons{
+.main__icons {
   height: 50px;
   width: 50px;
-  padding:10px;
-  fill:#3500D3;
+  padding: 10px;
+  fill: #3500d3;
   border: 2px solid white;
   border-radius: 10px;
   box-shadow: white 0 0 10px inset;
   margin-right: 10px;
 }
-.main__description--para{
-  margin:10px 0;
+.main__description--para {
+  margin: 10px 0;
   display: flex;
   align-items: center;
   font-size: 20px;
 }
-.main__description--title{
-  font-size:30px;
+.main__description--title {
+  font-size: 30px;
   margin-bottom: 30px;
 }
-.main__title{
+.main__title {
   font-size: 50px;
   margin-bottom: 30px;
 }
-.color{
-  color:#3500D3;
+.color {
+  color: #3500d3;
 }
 .main__description--title,
 .main__title,
-.movielist__label{
+.movielist__label {
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(to top,#3500D3 1.84%,#624e9c 102.67%);
+  background: linear-gradient(to top, #3500d3 1.84%, #624e9c 102.67%);
   -webkit-background-clip: text;
 }
 
-
 /* MOVIE LIST PAGE */
 
-.movielist__search{
+.movielist__search {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  width:100%;
+  width: 100%;
 }
-.movielist__label{
+.movielist__label {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -120,143 +116,179 @@ nav{
   font-size: 70px;
   font-weight: 700;
   margin-bottom: 20px;
-  padding-top:50px;
+  padding-top: 50px;
 }
-.movielist__input{
-  padding:20px 20px;
-  width:50%;
+.movielist__input {
+  padding: 20px 20px;
+  width: 50%;
   font-size: 20px;
   border-radius: 50px;
   border-style: none;
-  transition: all .2s ease-in-out;
-  background:linear-gradient(to right,#3500D3, #240090);
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(to right, #3500d3, #240090);
 }
-input:focus{
-  outline:none;
+input:focus {
+  outline: none;
 }
-.movielist__btn{
-  width:10%;
+.movielist__btn {
+  width: 10%;
   justify-content: center;
   align-items: center;
   display: flex;
   margin-left: 20px;
-  background:linear-gradient(to top,#3500D3, #240090);
+  background: linear-gradient(to top, #3500d3, #240090);
   border-radius: 50px;
   border-style: none;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .movielist__btn:hover,
-.movielist__input:focus{
+.movielist__input:focus {
   filter: brightness(110%);
 }
-.movielist__btn--icon{
+.movielist__btn--icon {
   height: 17px;
   width: 17px;
-  fill:white;
+  fill: white;
 }
-::placeholder{
-  color:rgba(255, 255, 255, 0.558);
+::placeholder {
+  color: rgba(255, 255, 255, 0.558);
 }
-.movielist__wrapper{
-  background-image:linear-gradient(#0C0032,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7),black), url('https://media.istockphoto.com/id/1271522601/photo/pop-corn-and-on-red-armchair-cinema.jpg?s=612x612&w=0&k=20&c=XwQxmfrHb-OwV5onPUW5ApB4RaGBK7poSIzZj4q_N_g=');
+.movielist__wrapper {
+  background-image: linear-gradient(
+      #0c0032,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7),
+      black
+    ),
+    url("https://media.istockphoto.com/id/1271522601/photo/pop-corn-and-on-red-armchair-cinema.jpg?s=612x612&w=0&k=20&c=XwQxmfrHb-OwV5onPUW5ApB4RaGBK7poSIzZj4q_N_g=");
   background-size: cover;
   background-position: center;
-  height:500px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 
 /* FOOTER LOGO */
 
-
-.footer__wrapper{
+.footer__wrapper {
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
-.footer__logo{
-  height:100px;
-  filter:invert(90%);
-  margin-top:40px;
+.footer__logo {
+  height: 100px;
+  filter: invert(90%);
+  margin-top: 40px;
 }
-.footer__wrapper{
-  background-color:#282828;
-  width:100%;
+.footer__wrapper {
+  background-color: #282828;
+  width: 100%;
 }
-.footer__links{
+.footer__links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.footer__link{
+.footer__link {
   list-style: none;
-  margin:25px 25px 40px 25px;
-  color:whitesmoke;
+  margin: 25px 25px 40px 25px;
+  color: whitesmoke;
   font-size: 20px;
 }
-.footer__link:hover{
-  cursor:pointer;
+.footer__link:hover {
+  cursor: pointer;
 }
-.footer__para{
-  margin-bottom:30px;
-  color:whitesmoke;
+.footer__para {
+  margin-bottom: 30px;
+  color: whitesmoke;
 }
-.footer__a{
-  color:whitesmoke;
+.footer__a {
+  color: whitesmoke;
   text-decoration: none;
 }
-.footer__a:hover{
+.footer__a:hover {
   text-decoration: underline;
 }
 
-
 /* MOVIE LIST */
 
-
-.movies{
+.movies {
   background-color: black;
-  width:100%;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black),url('https://wallpapercave.com/wp/wp5556216.jpg');
+  width: 100%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black),
+    url("https://wallpapercave.com/wp/wp5556216.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.movies__wrapper{
+.movies__wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  gap:1rem;
-  width:100%;
+  gap: 1rem;
+  width: 100%;
   max-width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
+  padding: 50px;
 }
-.movie{
-  padding:5px;
+.movie {
+  padding: 5px;
   border-radius: 5px;
   background-color: white;
   overflow: hidden;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.movie:hover{
+.movie:hover {
   transform: scale(1.03);
 }
-.movie__info{
-  width:calc(100% / 3%);
+.movie__info {
+  width: calc(100% / 3%);
 }
-.movie__description{
-  width:300px;
+.movie__description {
+  width: 300px;
   text-align: center;
 }
-.movie__title{
+.movie__title {
   font-size: 20px;
 }
-.movie__img{
-  height:450px;
-  width:300px;
+.movie__img {
+  height: 450px;
+  width: 300px;
+}
+
+.skeleton__img {
+  background-color: lightgray;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skeleton__title {
+  width: 150px;
+  background-color: lightgray;
+  height: 30px;
+}
+
+.skeleton__title--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px;
+}
+
+.skeleton {
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 300ms ease;
+  background-color: #fff;
 }

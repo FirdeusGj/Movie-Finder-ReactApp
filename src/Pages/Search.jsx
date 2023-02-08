@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 // eslint-disable-next-line
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Search() {
   const { state } = useLocation();
@@ -9,15 +9,15 @@ export default function Search() {
   // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
   const [searchMovie, setSearchMovie] = useState("");
-  // eslint-disable-next-line
-  const navigate = useNavigate();
 
   async function FetchMovies(query) {
+    setLoading(true);
     const { data } = await axios.get(
       `https://www.omdbapi.com/?apikey=59e995b1&s=${searchMovie || query}`
     );
 
     setMovies(data.Search);
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function Search() {
   return (
     <>
       <div className="movielist__wrapper">
-        <label className="movielist__label">Search Any Movie</label>
+        <label className="movielist__label">Browse Movies</label>
         <div className="movielist__search">
           <input
             className="movielist__input"
@@ -61,19 +61,33 @@ export default function Search() {
       </div>
       <div className="movies">
         <div className="movies__wrapper">
-          {movies.slice(0, 9).map((movie) => (
-            <div className="movie">
-              <div className="movie__info">
-                <div className="movie__img--wrapper">
-                  <img src={movie.Poster} alt="poster" className="movie__img" />
+          {loading
+            ? new Array(9).fill(0).map((_, index) => (
+                <div class="skeleton">
+                  <div class="skeleton__img"></div>
+                  <div class="skeleton__title--wrap">
+                    <div class="skeleton__title"></div>
+                    <div class="skeleton__title"></div>
+                  </div>
                 </div>
-                <div className="movie__description">
-                  <h1 className="movie__title">{movie.Title}</h1>
-                  <h3 className="movie__type">Type : {movie.Type}</h3>
+              ))
+            : movies.slice(0, 9).map((movie) => (
+                <div className="movie">
+                  <div className="movie__info">
+                    <div className="movie__img--wrapper">
+                      <img
+                        src={movie.Poster}
+                        alt="poster"
+                        className="movie__img"
+                      />
+                    </div>
+                    <div className="movie__description">
+                      <h1 className="movie__title">{movie.Title}</h1>
+                      <h3 className="movie__type">Type : {movie.Type}</h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              ))}
         </div>
       </div>
     </>

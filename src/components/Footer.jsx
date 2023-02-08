@@ -11,7 +11,7 @@ export default function Footer() {
         </div>
         <div className="footer__links--wrapper">
             <ul className='footer__links'>
-                <li className='footer__link'><Link className='footer__a' to="/">Home</Link></li>
+                <li className='footer__link'><a className='footer__a' to="/">Home</a></li>
                 <li className='footer__link'><Link className='footer__a' to="/">Find Your Movies</Link></li>
                 <li className='footer__link'><Link className='footer__a' to="/">About</Link></li>
             </ul>
