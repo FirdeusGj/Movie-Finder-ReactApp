@@ -3,6 +3,7 @@
   font-family: sans-serif;
   margin:0;
   padding:0;
+  scroll-behavior: smooth;
 }
 .border{
   border:1px solid black;
@@ -122,11 +123,12 @@ nav{
   padding-top:50px;
 }
 .movielist__input{
-  padding:20px 5px;
+  padding:20px 20px;
   width:50%;
   font-size: 20px;
   border-radius: 50px;
   border-style: none;
+  transition: all .2s ease-in-out;
   background:linear-gradient(to right,#3500D3, #240090);
 }
 input:focus{
@@ -141,6 +143,12 @@ input:focus{
   background:linear-gradient(to top,#3500D3, #240090);
   border-radius: 50px;
   border-style: none;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.movielist__btn:hover,
+.movielist__input:focus{
+  filter: brightness(110%);
 }
 .movielist__btn--icon{
   height: 17px;
@@ -204,4 +212,51 @@ input:focus{
 }
 .footer__a:hover{
   text-decoration: underline;
+}
+
+
+/* MOVIE LIST */
+
+
+.movies{
+  background-color: black;
+  width:100%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black),url('https://wallpapercave.com/wp/wp5556216.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.movies__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap:1rem;
+  width:100%;
+  max-width: 1200px;
+  margin:0 auto;
+}
+.movie{
+  padding:5px;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+.movie:hover{
+  transform: scale(1.03);
+}
+.movie__info{
+  width:calc(100% / 3%);
+}
+.movie__description{
+  width:300px;
+  text-align: center;
+}
+.movie__title{
+  font-size: 20px;
+}
+.movie__img{
+  height:450px;
+  width:300px;
 }

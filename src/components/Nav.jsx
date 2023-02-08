@@ -12,7 +12,7 @@ export default function Nav() {
           <div className="nav__links--wrapper">
             <ul className="nav__links">
               <li className="nav__link"><Link className="nav__a" to="/">Home</Link></li>
-              <li className="nav__link"><Link className="nav__a" to="/search">Find Movies</Link></li>
+              <li className="nav__link"><a className="nav__a" href="#movielist">Find Movies</a></li>
             </ul>
           </div>
         </div>

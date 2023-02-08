@@ -12,9 +12,8 @@ function App() {
     <div className="App">
       <Router>
         <Nav />
-        <MovieList/>
           <Routes>
-            <Route exact path='/' element={<MainPage/>}/>
+            <Route exact path='/' element={<><MovieList/><MainPage/></>}/>
             <Route exact path="/search" element={<Search/>}/>
           </Routes>
         <Footer />
