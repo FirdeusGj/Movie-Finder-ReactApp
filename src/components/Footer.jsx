@@ -7,7 +7,7 @@ export default function Footer() {
     <>
     <footer className="footer__wrapper">
         <div className="footer__logo--wrapper">
-            <img src={movieLogo} className="nav__logo footer__logo"/>
+            <img src={movieLogo} className="nav__logo footer__logo" alt='logo'/>
         </div>
         <div className="footer__links--wrapper">
             <ul className='footer__links'>

@@ -7,7 +7,7 @@ export default function Nav() {
       <nav>
         <div className="nav__section">
           <div className="nav__logo--wrapper">
-            <img src={movieLogo} className="nav__logo"/>
+            <img src={movieLogo} className="nav__logo" alt="logo"/>
           </div>
           <div className="nav__links--wrapper">
             <ul className="nav__links">

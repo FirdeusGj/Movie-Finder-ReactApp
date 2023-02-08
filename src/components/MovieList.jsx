@@ -3,11 +3,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function MovieList() {
+  // eslint-disable-next-line
   const { id } = useParams();
+  // eslint-disable-next-line
   const [movies, setMovies] = useState([]);
   const [searchMovie, setSearchMovie] = useState();
   const navigate = useNavigate();
-  const [showMovies, setShowMovies] = useState(false);
 
   function onSearch() {
     fetchMovies(searchMovie);
@@ -16,7 +17,6 @@ export default function MovieList() {
   const goToSearch = () => {
     navigate("search", { state: { query: searchMovie } });
     onSearch();
-    setShowMovies(true);
   }
 
   function onSearchKey(event) {

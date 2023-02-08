@@ -1,12 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+// eslint-disable-next-line
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Search() {
   const { state } = useLocation();
   const [movies, setMovies] = useState([]);
+  // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
   const [searchMovie, setSearchMovie] = useState("");
+  // eslint-disable-next-line
   const navigate = useNavigate();
 
   async function FetchMovies(query) {
@@ -21,6 +24,7 @@ export default function Search() {
     if (state && state.query) {
       FetchMovies(state.query);
     }
+    // eslint-disable-next-line
   }, []);
 
   const searchEnter = (e) => {
@@ -61,7 +65,7 @@ export default function Search() {
             <div className="movie">
               <div className="movie__info">
                 <div className="movie__img--wrapper">
-                  <img src={movie.Poster} className="movie__img" />
+                  <img src={movie.Poster} alt="poster" className="movie__img" />
                 </div>
                 <div className="movie__description">
                   <h1 className="movie__title">{movie.Title}</h1>
