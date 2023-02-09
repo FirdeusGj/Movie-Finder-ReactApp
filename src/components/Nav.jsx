@@ -4,10 +4,12 @@ import movieLogo from "../imgs/movieLogo.png";
 
 export default function Nav() {
   return (
-      <nav>
+      <nav id="nav">
         <div className="nav__section">
           <div className="nav__logo--wrapper">
+            <Link to='/'>
             <img src={movieLogo} className="nav__logo" alt="logo"/>
+            </Link>
           </div>
           <div className="nav__links--wrapper">
             <ul className="nav__links">

@@ -30,15 +30,6 @@ export default function MovieList() {
     );
     setMovies(data.Search);
   }
-  // async function fetchMovies(movieId) {
-  //   const { data } = await axios.get(
-  //     `https://www.omdbapi.com/?s=${movieId}&apikey=b9e1eec5`
-  //   );
-  //   setMovies(data.Search);
-  // }
-  // useEffect(() => {
-  //   fetchMovies();
-  // }, []);
   useEffect(() => {
     fetchMovies();
   }, []);

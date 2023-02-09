@@ -271,7 +271,7 @@ input:focus {
 }
 
 .skeleton__title {
-  width: 150px;
+  width: 236px;
   background-color: lightgray;
   height: 30px;
 }
@@ -291,4 +291,48 @@ input:focus {
   padding: 20px;
   transition: all 300ms ease;
   background-color: #fff;
+}
+
+
+/** MOVIE INFORMATION SECTION **/
+
+
+.movieinfo__wrapper{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.movieinfo__image{
+  height: 450px;
+  width: 300px;
+}
+.similar__movies--wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.similar__img{
+  height: 450px;
+  width: 300px;
+  padding:10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.movieinfo{
+  background-color: #282828;
+}
+.movieinfo__h1,
+.movieinfo__h2,
+.movieinfo__para,
+.similarmovie__title{
+  color:white;
+  margin:0 0 15px 0;
+}
+.movieinfo__description{
+  width:40%;
+}
+.similarmovie__title{
+  text-align: center;
 }

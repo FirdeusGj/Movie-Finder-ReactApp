@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MainPage() {
   return (
-    <main>
+    <main id="mainpage">
       <div className="main__section">
         <div className="main__wrapper">
           <div className="main__title--wrapper">

@@ -75,11 +75,13 @@ export default function Search() {
                 <div className="movie">
                   <div className="movie__info">
                     <div className="movie__img--wrapper">
+                      <Link to={`/Search/${movie.imdbID}`} state={{title: searchMovie || state.query}}>
                       <img
                         src={movie.Poster}
                         alt="poster"
                         className="movie__img"
-                      />
+                        />
+                        </Link>
                     </div>
                     <div className="movie__description">
                       <h1 className="movie__title">{movie.Title}</h1>
