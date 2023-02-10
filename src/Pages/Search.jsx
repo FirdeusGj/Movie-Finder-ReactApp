@@ -15,11 +15,9 @@ export default function Search() {
     const { data } = await axios.get(
       `https://www.omdbapi.com/?apikey=59e995b1&s=${searchMovie || query}`
     );
-
     setMovies(data.Search);
     setLoading(false);
   }
-
   useEffect(() => {
     if (state && state.query) {
       FetchMovies(state.query);
@@ -32,6 +30,7 @@ export default function Search() {
       FetchMovies();
     }
   };
+
   return (
     <>
       <div className="movielist__wrapper">
@@ -63,15 +62,15 @@ export default function Search() {
         <div className="movies__wrapper">
           {loading
             ? new Array(9).fill(0).map((_, index) => (
-                <div class="skeleton">
-                  <div class="skeleton__img"></div>
-                  <div class="skeleton__title--wrap">
-                    <div class="skeleton__title"></div>
-                    <div class="skeleton__title"></div>
+                <div className="skeleton">
+                  <div className="skeleton__img"></div>
+                  <div className="skeleton__title--wrap">
+                    <div className="skeleton__title"></div>
+                    <div className="skeleton__title"></div>
                   </div>
                 </div>
               ))
-            : movies.slice(0, 9).map((movie) => (
+            : movies.length === 0 ? <div>no results</div> : movies.slice(0, 9).map((movie) => (
                 <div className="movie">
                   <div className="movie__info">
                     <div className="movie__img--wrapper">
@@ -88,8 +87,7 @@ export default function Search() {
                       <h3 className="movie__type">Type : {movie.Type}</h3>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>))}
         </div>
       </div>
     </>

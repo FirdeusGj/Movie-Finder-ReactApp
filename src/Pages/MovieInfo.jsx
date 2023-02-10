@@ -1,21 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 export default function MovieInfo() {
   const { id } = useParams();
   const { state } = useLocation();
   const [movie, setMovie] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [similarMovies, setSimilarMovies] = useState([]);
 
   useEffect(() => {
     const fetchMovie = async () => {
-      setLoading(true);
       const { data } = await axios.get(`
             https://www.omdbapi.com/?apikey=59e995b1&i=${id}`);
       setMovie(data);
-      setLoading(false);
     };
     fetchMovie();
   }, []);
@@ -38,7 +35,7 @@ export default function MovieInfo() {
       <div className="movieinfo">
         <div className="movieinfo__wrapper">
           <div className="movieinfo__image">
-            <img src={movie.Poster} className="movieinfo__img"/>
+            <img src={movie.Poster} className="movieinfo__img" />
           </div>
           <div className="movieinfo__description">
             <h1 className="movieinfo__h1">Title : {movie.Title}</h1>
@@ -58,11 +55,11 @@ export default function MovieInfo() {
           <h1 className="similarmovie__title">Check out similar shows</h1>
           <div className="similar__movies--wrapper">
             {similarMovies
-              .filter((elem) => elem.Genre !== id)
+              .filter((elem) => elem.imdbID !== id)
               .slice(0, 4)
               .map((recommend) => (
-                <div className="similar__movies">
-                  <img src={recommend.Poster} alt="" className="similar__img"/>
+                <div className="similar__movies" key={recommend.imdbID}>
+                  <img src={recommend.Poster} alt="" className="similar__img" />
                 </div>
               ))}
           </div>

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
 
 export default function MovieList() {
   // eslint-disable-next-line
@@ -10,13 +9,9 @@ export default function MovieList() {
   const [searchMovie, setSearchMovie] = useState();
   const navigate = useNavigate();
 
-  function onSearch() {
-    fetchMovies(searchMovie);
-  }
 
   const goToSearch = () => {
     navigate("search", { state: { query: searchMovie } });
-    onSearch();
   }
 
   function onSearchKey(event) {
@@ -24,15 +19,6 @@ export default function MovieList() {
       goToSearch();
     }
   }
-  async function fetchMovies(movieId) {
-    const { data } = await axios.get(
-      `https://www.omdbapi.com/?s=${movieId}&apikey=b9e1eec5`
-    );
-    setMovies(data.Search);
-  }
-  useEffect(() => {
-    fetchMovies();
-  }, []);
   return (
     <div>
       <div id="movielist">

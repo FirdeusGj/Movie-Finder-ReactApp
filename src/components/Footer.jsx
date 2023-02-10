@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import movieLogo from "../imgs/movieLogo.png";
 
 export default function Footer() {
@@ -6,7 +7,9 @@ export default function Footer() {
     <>
     <footer className="footer__wrapper">
         <div className="footer__logo--wrapper">
-            <img src={movieLogo} className="nav__logo footer__logo" alt='logo'/>
+          <Link to='/'>
+            <img src={movieLogo} className="footer__logo" alt='logo'/>
+          </Link>
         </div>
         <div className="footer__links--wrapper">
             <ul className='footer__links'>
