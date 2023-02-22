@@ -70,7 +70,7 @@ export default function Search() {
                   </div>
                 </div>
               ))
-            : movies.length === 0 ? <div>no results</div> : movies.slice(0, 9).map((movie) => (
+            : movies.slice(0, 9).map((movie) => (
                 <div className="movie">
                   <div className="movie__info">
                     <div className="movie__img--wrapper">
