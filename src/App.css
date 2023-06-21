@@ -16,27 +16,22 @@
   display: flex;
 }
 nav {
-  height: 100px;
+  height: 15vh;
   background-color: #0c0032;
 }
 .nav__link {
-  font-size: 24px;
-  margin: 10px;
+  font-size: 1.5rem;
+  margin: 0.8rem;
   border: 2px solid white;
   border-radius: 10px;
   padding: 10px;
   background-color: #2828287a;
-  box-shadow: 0 0 2px white;
+  box-shadow: 0 0 10px white;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 .nav__link:hover {
   box-shadow: 0 0 10px white;
-}
-.nav__logo--wrapper {
-  position: relative;
-  height: 100px;
-  width: 100px;
 }
 .nav__a {
   -webkit-text-fill-color: transparent;
@@ -45,7 +40,7 @@ nav {
   font-weight: 700;
 }
 .nav__logo {
-  width: 100px;
+  height:13vh;
   filter: invert(90%);
 }
 .nav__section {

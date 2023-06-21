@@ -14,7 +14,7 @@ export default function Search() {
     setLoading(true);
     const { data } = await axios.get(
       `https://www.omdbapi.com/?apikey=59e995b1&s=${searchMovie || query}`
-    );
+    ).catch((error) => console.log(error));
     setMovies(data.Search);
     setLoading(false);
   }
