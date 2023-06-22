@@ -57,15 +57,15 @@ nav {
   background-size: cover;
   background-position: center;
   color: #fefbf6;
-  height: 700px;
+  height: 43.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
 .main__icons {
-  height: 50px;
-  width: 50px;
+  height: 3.1rem;
+  width: 3.1rem;
   padding: 10px;
   fill: #3500d3;
   border: 2px solid white;
@@ -77,14 +77,14 @@ nav {
   margin: 10px 0;
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .main__description--title {
-  font-size: 30px;
-  margin-bottom: 30px;
+  font-size: 1.9rem;
+  margin-bottom: 1.9rem;
 }
 .main__title {
-  font-size: 50px;
+  font-size: 3.1rem;
   margin-bottom: 30px;
 }
 .color {
@@ -111,16 +111,16 @@ nav {
   align-items: center;
   display: flex;
   text-align: center;
-  font-size: 70px;
+  font-size: 4.4rem;
   font-weight: 700;
   margin-bottom: 20px;
-  padding-top: 50px;
+  padding-top: 3.1rem;
 }
 .movielist__input {
   padding: 20px 20px;
   width: 50%;
-  font-size: 20px;
-  border-radius: 50px;
+  font-size: 1.25rem;
+  border-radius: 3.1rem;
   border-style: none;
   transition: all 0.2s ease-in-out;
   background: linear-gradient(to right, #3500d3, #240090);
@@ -145,8 +145,8 @@ input:focus {
   filter: brightness(110%);
 }
 .movielist__btn--icon {
-  height: 17px;
-  width: 17px;
+  height: 1rem;
+  width: 1rem;
   fill: white;
 }
 ::placeholder {
@@ -164,7 +164,7 @@ input:focus {
     url("https://media.istockphoto.com/id/1271522601/photo/pop-corn-and-on-red-armchair-cinema.jpg?s=612x612&w=0&k=20&c=XwQxmfrHb-OwV5onPUW5ApB4RaGBK7poSIzZj4q_N_g=");
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 31.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,7 +180,7 @@ input:focus {
   flex-direction: column;
 }
 .footer__logo {
-  height: 100px;
+  height: 6.2rem;
   filter: invert(90%);
   margin-top: 40px;
 }
@@ -197,7 +197,7 @@ input:focus {
   list-style: none;
   margin: 25px 25px 40px 25px;
   color: whitesmoke;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .footer__link:hover {
   cursor: pointer;
@@ -232,7 +232,7 @@ input:focus {
   justify-content: space-around;
   gap: 1rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   padding: 50px;
 }
@@ -250,28 +250,28 @@ input:focus {
   width: calc(100% / 3%);
 }
 .movie__description {
-  width: 300px;
+  width: 19rem;
   text-align: center;
 }
 .movie__title {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .movie__img {
-  height: 450px;
-  width: 300px;
+  height: 28.1rem;
+  width: 18.8rem;
 }
 
 .skeleton__img {
   background-color: lightgray;
-  height: 500px;
+  height: 31rem;
   display: flex;
   flex-wrap: wrap;
 }
 
 .skeleton__title {
-  width: 236px;
+  width: 14.7rem;
   background-color: lightgray;
-  height: 30px;
+  height: 1.9rem;
 }
 
 .skeleton__title--wrap {
@@ -305,13 +305,13 @@ input:focus {
   background-color: #282828;
 }
 .movieinfo__image {
-  height: 450px;
-  width: 300px;
+  height: 28rem;
+  width: 18.8rem;
   margin: 10px;
 }
 .movieinfo__img {
-  height: 450px;
-  width: 300px;
+  height: 28rem;
+  width: 18.8rem;
   padding: 10px;
   background-color: white;
   border-radius: 10px;
@@ -323,8 +323,8 @@ input:focus {
   justify-content: space-evenly;
 }
 .similar__img {
-  height: 450px;
-  width: 300px;
+  height: 28rem;
+  width: 18.8rem;
   padding: 10px;
   background-color: white;
   border-radius: 10px;
@@ -343,7 +343,7 @@ input:focus {
 .similarmovie__title {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 50px;
+  font-size: 3.1rem;
 }
 
 .footer__link {
@@ -353,7 +353,7 @@ input:focus {
 
 @media (max-width: 768px) {
   .movielist__label {
-    font-size: 50px;
+    font-size: 3.1rem;
   }
   .movielist__btn {
     width: 20%;
@@ -362,19 +362,19 @@ input:focus {
     width: 70%;
   }
   .main__title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   .movieinfo__h1 {
-    font-size: 25px;
+    font-size: 1.6rem;
   }
   .movieinfo__h2 {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
   .movieinfo__para {
-    font-size: 13px;
+    font-size: 0.8rem;
   }
   .similarmovie__title {
-    font-size: 35px;
+    font-size: 2.1rem;
   }
 }
 /*Small phones*/
@@ -384,15 +384,15 @@ input:focus {
     padding:0 20px;
   }
   .movieinfo__h1 {
-    font-size: 30px;
+    font-size: 1.8rem;
     text-align: center;
   }
   .movieinfo__h2 {
-    font-size: 25px;
+    font-size: 1.6rem;
     text-align: center;
   }
   .movieinfo__para {
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: center;
   }
   .movieinfo__img{
