@@ -118,7 +118,8 @@ nav {
 }
 .movielist__input {
   padding: 20px 20px;
-  width: 50%;
+  color:white;
+  width: 40vw;
   font-size: 1.25rem;
   border-radius: 3.1rem;
   border-style: none;
@@ -128,8 +129,11 @@ nav {
 input:focus {
   outline: none;
 }
+::placeholder{
+  color:white;
+}
 .movielist__btn {
-  width: 10%;
+  width: 5rem;
   justify-content: center;
   align-items: center;
   display: flex;
