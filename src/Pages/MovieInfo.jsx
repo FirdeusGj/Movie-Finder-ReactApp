@@ -39,7 +39,7 @@ export default function MovieInfo() {
           </div>
           <div className="movieinfo__description">
             <h1 className="movieinfo__h1">Title : {movie.Title}</h1>
-            <h2 className="movieinfo__h2">About</h2>
+            <h2 className="movieinfo__h2">About :</h2>
             <p className="movieinfo__para">Plot : {movie.Plot}</p>
             <p className="movieinfo__para">Genre : {movie.Genre}</p>
             <p className="movieinfo__para">Year : {movie.Year}</p>

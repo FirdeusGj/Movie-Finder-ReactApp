@@ -26,12 +26,15 @@ nav {
   border-radius: 10px;
   padding: 10px;
   background-color: #2828287a;
-  box-shadow: 0 0 10px white;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 .nav__link:hover {
   box-shadow: 0 0 10px white;
+  transform: scale(1.03);
+}
+.nav__link:active{
+  transform: scale(1);
 }
 .nav__a {
   -webkit-text-fill-color: transparent;
@@ -121,8 +124,10 @@ nav {
   color:white;
   width: 40vw;
   font-size: 1.25rem;
-  border-radius: 3.1rem;
+  border-top-left-radius: 3.1rem;
+  border-bottom-left-radius: 3.1rem;
   border-style: none;
+  border:2px solid #240090;
   transition: all 0.2s ease-in-out;
   background: linear-gradient(to right, #3500d3, #240090);
 }
@@ -137,12 +142,16 @@ input:focus {
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-left: 20px;
-  background: linear-gradient(to top, #3500d3, #240090);
-  border-radius: 50px;
+  background: linear-gradient(to left, #3500d3, #240090);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   border-style: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  border:2px solid #240090;
+}
+.movielist__btn:active{
+  transform: scale(1.05);
+  background:#240090;
 }
 .movielist__btn:hover,
 .movielist__input:focus {
@@ -243,9 +252,16 @@ input:focus {
 .movie {
   padding: 5px;
   border-radius: 5px;
-  background-color: white;
+  background:linear-gradient(rgb(200, 200, 200),white);
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 10px 0 white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie:hover{
+  box-shadow: 0 0 10px 2px white;
 }
 .movie:hover {
   transform: scale(1.03);
@@ -341,6 +357,15 @@ input:focus {
   margin: 0 0 15px 0;
   z-index: 2;
 }
+.movieinfo__para{
+  background-color: rgba(255, 255, 255, 0.153);
+    padding:5px;
+    margin:0 0 5px 0;
+    border-radius:0.5rem;
+}
+.movieinfo__h1{
+  text-decoration: underline;
+}
 .movieinfo__description {
   width: 40%;
 }
@@ -376,6 +401,7 @@ input:focus {
   }
   .movieinfo__para {
     font-size: 0.8rem;
+    text-align: start;
   }
   .similarmovie__title {
     font-size: 2.1rem;
@@ -390,6 +416,7 @@ input:focus {
   .movieinfo__h1 {
     font-size: 1.8rem;
     text-align: center;
+
   }
   .movieinfo__h2 {
     font-size: 1.6rem;
@@ -397,7 +424,6 @@ input:focus {
   }
   .movieinfo__para {
     font-size: 0.9rem;
-    text-align: center;
   }
   .movieinfo__img{
     width:100%;
@@ -406,5 +432,8 @@ input:focus {
   .movieinfo__image{
     width:100%;
     height:100%;
+  }
+  .nav__link{
+    font-size: 1rem;
   }
 }
